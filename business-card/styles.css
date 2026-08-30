@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fondoPantalla {
+    position: absolute;
+    opacity: 0;
+}
+
+.activo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+}
+
+.contenedorPrincipal {
+    background-color: burlywood;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 10px solid brown;
+    filter: drop-shadow(0 0 5px brown);
+    box-shadow: 0 0 25px burlywood;
+    transition: 0.2s;
+
+    width: min(90vw, 600px);
+}
+
+main:hover {
+    filter: drop-shadow(0 0 15px brown);
+    transition: 0.2s;
+}
+
+.contenedorSecundario {
+    background-color: burlywood;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 10px solid brown;
+    filter: drop-shadow(0 0 5px brown);
+    box-shadow: 0 0 25px burlywood;
+    transition: 0.2s;
+    opacity: 0.75;
+
+    width: min(90vw, 600px);
+}
+
+.myPhoto {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    width: min(250px, 60vw);
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: brown;
+    font-family: "Impact";
+    font-weight: lighter;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 3rem);
+    color: brown;
+    font-family: "Impact";
+    font-weight: lighter;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    color: brown;
+}
+
+p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    color: brown;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    max-width: 395px;
+    height: 25px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid brown;
+    color: brown;
+    background-color: burlywood;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid brown;
+    filter: drop-shadow(0 0 5px brown);
+}
+
+button {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    background-color: brown;
+    color: burlywood;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px brown);
+}
+
+a img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+}
+
+a img:hover {
+    filter: drop-shadow(0 0 2px brown);
+}
+
+
+/* 📱 Pantallas pequeñas */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .contenedorPrincipal,
+    .contenedorSecundario {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .myPhoto {
+        width: min(200px, 55vw);
+    }
+
+    li {
+        text-align: center;
+    }
+
+    p {
+        gap: 10px;
+    }
+
+    a img {
+        margin-left: 5px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
